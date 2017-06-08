@@ -17,5 +17,15 @@
   		<artifactId>vaadin-spring</artifactId>
   		<version>2.0.1</version>
   	</dependency>
+  	<dependency>
+  		<groupId>hr.kruno.magazin</groupId>
+  		<artifactId>service</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.vaadin</groupId>
+  		<artifactId>vaadin-compatibility-server</artifactId>
+  		<version>8.0.6</version>
+  	</dependency>
   </dependencies>
 </project>
