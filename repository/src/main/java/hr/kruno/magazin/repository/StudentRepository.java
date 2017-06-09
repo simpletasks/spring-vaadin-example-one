@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import hr.kruno.magazin.model.entity.Student;
 
-// good pratcice that @repositories and @Services are interfaces. TODO - explain why ?
+// good practice that @repositories and @Services are interfaces. TODO - explain why ?
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
 

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
+import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Alignment;
@@ -14,6 +15,7 @@ import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
+@Widgetset("com.vaadin.v7.Vaadin7WidgetSet")
 @SpringUI(path=UniverseMainUi.NAME) // URL = localhost:8080/web/ui
 @Title(value="MyApp1") // label in the browser tab where application is called
 @Theme(value="valo")	// css library for visualization of vaadin components

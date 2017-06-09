@@ -4,7 +4,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.v7.ui.Tree;
 
-
+@org.springframework.stereotype.Component
 public class UniverseMenuFactory implements UIComponentBuilder {
 
 	private class UniverseMenu extends VerticalLayout {

@@ -27,5 +27,10 @@
   		<artifactId>vaadin-compatibility-server</artifactId>
   		<version>8.0.6</version>
   	</dependency>
+  	<dependency>
+  		<groupId>com.vaadin</groupId>
+  		<artifactId>vaadin-compatibility-client-compiled</artifactId>
+  		<version>8.0.6</version>
+  	</dependency>
   </dependencies>
 </project>
