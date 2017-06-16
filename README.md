@@ -1,11 +1,12 @@
 #### Build OK; Deploy OK; run OK
 
-1. In parent project run : mvn package
+1. In parent project run : mvn clean package
 2. Manual deploy on wf10
 
 wildfly - app deployment error: cannot create HibernateJpaAutoConfiguration
 solution - exclude auto guessing for jpa model classes 
 https://stackoverflow.com/questions/36387265/disable-all-database-related-auto-configuration-in-spring-boot
+- in case when repositories are not configured yet
 
 @EntityScan DEPRECATED - Spring 1.5.x
 Solution - for now use spring boot version 1.4.x Not 1.5.x

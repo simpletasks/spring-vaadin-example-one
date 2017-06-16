@@ -641,10 +641,13 @@ function setDocumentScrollTop(ypos)
 <body class="markdown-body">
 <h4> <a id="build-ok-deploy-ok-run-ok" class="anchor" href="#build-ok-deploy-ok-run-ok" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build OK; Deploy OK; run OK</h4> 
 <ol> 
- <li>In parent project run : mvn package</li> 
+ <li>In parent project run : mvn clean package</li> 
  <li>Manual deploy on wf10</li> 
 </ol> 
 <p>wildfly - app deployment error: cannot create HibernateJpaAutoConfiguration solution - exclude auto guessing for jpa model classes <a href="https://stackoverflow.com/questions/36387265/disable-all-database-related-auto-configuration-in-spring-boot">https://stackoverflow.com/questions/36387265/disable-all-database-related-auto-configuration-in-spring-boot</a></p> 
+<ul> 
+ <li>in case when repositories are not configured yet</li> 
+</ul> 
 <p>@EntityScan DEPRECATED - Spring 1.5.x Solution - for now use spring boot version 1.4.x Not 1.5.x <a href="https://stackoverflow.com/questions/38896414/difference-between-entityscan-and-componentscan">https://stackoverflow.com/questions/38896414/difference-between-entityscan-and-componentscan</a></p> 
 <p>CAUTION Package names in SpringBoot annotation are not type safe!</p> 
 <h3> <a id="problem-with-tree-ui-component---not-available-in-vaadin-8x" class="anchor" href="#problem-with-tree-ui-component---not-available-in-vaadin-8x" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem with Tree UI component - Not Available in vaadin 8.x</h3> 

@@ -1,5 +1,6 @@
 package com.kruno.magazin.web;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Map;
 
@@ -25,6 +26,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.vendor.AbstractJpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.jta.JtaAfterCompletionSynchronization;
 import org.springframework.transaction.jta.JtaTransactionManager;
 
 @Configuration
@@ -32,22 +34,24 @@ import org.springframework.transaction.jta.JtaTransactionManager;
 public class MyVendorAdapter extends JpaBaseConfiguration {
 
 
-	protected MyVendorAdapter(DataSource dataSource, JpaProperties properties,
-			ObjectProvider<JtaTransactionManager> jtaTransactionManagerProvider) {
-		super(dataSource, properties, jtaTransactionManagerProvider);
-		// TODO Auto-generated constructor stub
-	}
+  protected MyVendorAdapter(DataSource dataSource, JpaProperties properties,
+      ObjectProvider<JtaTransactionManager> jtaTransactionManagerProvider) {
+    super(dataSource, properties, jtaTransactionManagerProvider);
+    JtaAfterCompletionSynchronization jtaAfterCompletionSynchronization = new JtaAfterCompletionSynchronization(new ArrayList<>());
 
-	@Override
-	protected AbstractJpaVendorAdapter createJpaVendorAdapter() {
-		return new EclipseLinkJpaVendorAdapter();
-	}
+    // TODO Auto-generated constructor stub
+  }
 
-	@Override
-	protected Map<String, Object> getVendorProperties() {
-		// Turn off dynamic weaving to disable LTW lookup in static weaving mode
-				return Collections.singletonMap("eclipselink.weaving", "false");
-	}
-	
+  @Override
+  protected AbstractJpaVendorAdapter createJpaVendorAdapter() {
+    return new EclipseLinkJpaVendorAdapter();
+  }
+
+  @Override
+  protected Map<String, Object> getVendorProperties() {
+    // Turn off dynamic weaving to disable LTW lookup in static weaving mode
+    return Collections.singletonMap("eclipselink.weaving", "false");
+  }
+
 
 }

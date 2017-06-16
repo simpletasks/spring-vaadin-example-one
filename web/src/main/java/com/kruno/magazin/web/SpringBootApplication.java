@@ -19,11 +19,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.Order;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan({"hr.kruno.magazin"})
 @EnableJpaRepositories(basePackages = {"hr.kruno.magazin"})
 @EntityScan({"hr.kruno.magazin"})
+@EnableTransactionManagement
 @Order(2)
 // XXX when JPA setup is done. 'Exclude' is not needed any more.
 @EnableAutoConfiguration//(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
